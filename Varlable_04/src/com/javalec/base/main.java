@@ -61,6 +61,9 @@ public class main {
 		System.out.println("hi");
 		System.out.println("hi");
 		System.out.println("hi");
+		System.out.println("hi");
+		System.out.println("hi");
+		System.out.println("hi");
 		
 		
 	
