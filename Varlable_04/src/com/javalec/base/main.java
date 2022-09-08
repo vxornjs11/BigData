@@ -38,6 +38,7 @@ public class main {
 		System.out.println("num1 > num2 : " + (num1 > num2));//왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크면 참을 반환함.
 		System.out.println("num1 < num2 : " + (num1 < num2));//왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 작으면 참을 반환함.
 		System.out.println("num1 >= num2 : " + (num1 >= num2));//왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크거나 같으면 참을 반환함.
+		System.out.println("num1 >= num2 : " + (num1 >= num2));//왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크거나 같으면 참을 반환함.
 		System.out.println("num1 <= num2 : " + (num1 <= num2));//왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 작거나 같으면 참을 반환함.
 		
 		System.out.println("");
@@ -57,6 +58,8 @@ public class main {
 		
 		
 	
+		System.out.println("hi");
+		System.out.println("hi");
 		System.out.println("hi");
 		
 		
