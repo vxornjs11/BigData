@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author bigdata
+ *
+ */
+module jdo {
+}
