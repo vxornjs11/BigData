@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
@@ -21,11 +22,11 @@ public class Main {
 	private JFrame frame;
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
-	private JTextField tfNum1;
 	private JTextField tfNum2;
+	private JTextField tfNum1;
 	private JTextField tfaddNum1;
 	private JTextField tfaddNum2;
-	private JTextField tfendNum3;
+	private JTextField tfend;
 	private JButton btnadd;
 	private JButton btnmul;
 	private JButton btnsub;
@@ -36,6 +37,10 @@ public class Main {
 	private String k;
 	private String h;
 	private String g;
+	private String str1;
+	private String str2;
+	
+
 	
 	
 	/**
@@ -77,7 +82,7 @@ public class Main {
 		frame.getContentPane().add(getTfNum2());
 		frame.getContentPane().add(getTfaddNum1());
 		frame.getContentPane().add(getTfaddNum2());
-		frame.getContentPane().add(getTfendNum3());
+		frame.getContentPane().add(getTfend());
 		frame.getContentPane().add(getBtnadd());
 		frame.getContentPane().add(getBtnmul());
 		frame.getContentPane().add(getBtnsub());
@@ -87,6 +92,10 @@ public class Main {
 		frame.setTitle("두개의 숫자 가감승제");
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// 화면 중앙에 배치
+		
+				// 메인 화면이 시작되기전 사용법 보여주기
+				JOptionPane.showMessageDialog(null, "입력은 꼭 숫자로!","사용법", JOptionPane.WARNING_MESSAGE);
 	}
 
 	private JLabel getLblNewLabel() {
@@ -103,57 +112,66 @@ public class Main {
 		}
 		return lblNewLabel_1;
 	}
+	private JTextField getTfNum2() {
+		if (tfNum2 == null) {
+			tfNum2 = new JTextField();
+			tfNum2.setHorizontalAlignment(SwingConstants.TRAILING);
+			tfNum2.setBounds(82, 64, 63, 26);
+			tfNum2.setColumns(10);
+			
+		}
+		return tfNum2;
+	}
 	private JTextField getTfNum1() {
 		if (tfNum1 == null) {
 			tfNum1 = new JTextField();
 			tfNum1.setHorizontalAlignment(SwingConstants.TRAILING);
-			tfNum1.setBounds(82, 64, 63, 26);
 			tfNum1.setColumns(10);
+			tfNum1.setBounds(82, 34, 63, 26);
+			
+			
 		}
 		return tfNum1;
-	}
-	private JTextField getTfNum2() {
-		if (tfNum2 == null) {
-			tfNum2 = new JTextField();
-			tfNum2.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				}
-			});
-			tfNum2.setHorizontalAlignment(SwingConstants.TRAILING);
-			tfNum2.setColumns(10);
-			tfNum2.setBounds(82, 34, 63, 26);
-		}
-		return tfNum2;
 	}
 	private JTextField getTfaddNum1() {
 		if (tfaddNum1 == null) {
 			tfaddNum1 = new JTextField();
+			tfaddNum1.setEditable(false);
 			tfaddNum1.setHorizontalAlignment(SwingConstants.TRAILING);
 			tfaddNum1.setBounds(41, 180, 80, 26);
 			tfaddNum1.setColumns(10);
+			
+			text1();
+			
 		}
 		return tfaddNum1;
 	}
 	private JTextField getTfaddNum2() {
 		if (tfaddNum2 == null) {
 			tfaddNum2 = new JTextField();
+			tfaddNum2.setEditable(false);
 			tfaddNum2.setHorizontalAlignment(SwingConstants.TRAILING);
 			tfaddNum2.setColumns(10);
 			tfaddNum2.setBounds(158, 180, 80, 26);
 		}
 		return tfaddNum2;
 	}
-	private JTextField getTfendNum3() {
-		if (tfendNum3 == null) {
-			tfendNum3 = new JTextField();
-			tfendNum3.setHorizontalAlignment(SwingConstants.TRAILING);
-			tfendNum3.setColumns(10);
-			tfendNum3.setBounds(273, 180, 80, 26);
+	private JTextField getTfend() {
+		if (tfend == null) {
+			tfend = new JTextField();
+			tfend.setEditable(false);
+			tfend.setHorizontalAlignment(SwingConstants.TRAILING);
+			tfend.setColumns(10);
+			tfend.setBounds(273, 180, 80, 26);
 //			Math sum = new Math(tfaddNum1, tfaddNum2);
 //			sum.Mathsum();
 			
+			
+			
+			
+			
 		}
-		return tfendNum3;
+		return tfend;
 	}
 	private JButton getBtnadd() {
 		if (btnadd == null) {
@@ -229,7 +247,14 @@ public class Main {
 	}
 	
 	//------------------------------------------
+	 
+	private void text1() {
+      tfaddNum1.setText(tfNum1.getText());
+      
+   
+		
 	
+	}
 	
 	
 }
